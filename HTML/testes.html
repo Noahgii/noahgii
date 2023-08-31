@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loops</h1>
+    <div id="divId"></div>
+    
+</body>
+<script>
+let carros=[
+    {ano:2005, marca:"Ford"},
+    {ano: 1977, marca: "Ferrari"},
+    {ano: 2023, marca: "Mercedes"}
+];
+
+const div = document.getElementById("divId")
+
+for(item of carros){
+    let linkElem= document.createElement("a");
+    linkElem.textContent= item.marca;
+    linkElem.href = "http://google.com"
+    linkElem.style.display = "block";
+
+    div.appendChild(linkElem);
+
+    console.log(linkElem);
+}
+</script>
+</html>
